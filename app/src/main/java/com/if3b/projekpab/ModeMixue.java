@@ -4,6 +4,7 @@ public class ModeMixue {
     private String nama;
     private String tentang;
     private String foto;
+    private String DataAlamat;
 
     public String getNama() {
         return nama;
@@ -26,6 +27,14 @@ public class ModeMixue {
     }
 
     public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getDataAlamat() {
+        return foto;
+    }
+
+    public void setDataAlamat(String foto) {
         this.foto = foto;
     }
 }

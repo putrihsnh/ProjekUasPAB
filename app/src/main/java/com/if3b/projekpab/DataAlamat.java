@@ -17,17 +17,16 @@ public class DataAlamat {
     };
 
     public static ArrayList<ModeMixue> ambilDataPahlawan() {
-        ArrayList<ModeMixue> dataAlamat = new ArrayList<>();
+        ArrayList<ModeMixue> DataAlamat = new ArrayList<>();
         for (String[] varData : data) {
             ModeMixue model = new ModeMixue();
             model.setNama(varData[0]);
             model.setTentang(varData[1]);
             model.setFoto(varData[2]);
-
-            dataAlamat.add(model);
+            DataAlamat.add(model);
         }
 
-        return dataAlamat;
+        return DataAlamat;
     }
 
 }

@@ -12,14 +12,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
+import java.text.CollationElementIterator;
 import java.util.ArrayList;
 
 public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolder> {
-    private ArrayList<DataAlamat> alamatMixue;
+    private ArrayList<ModeMixue> alamatMixue;
     private Context ctx;
 
 
-    public AdapterCard(ArrayList<DataAlamat> alamatMixue, Context ctx) {
+    public AdapterCard(ArrayList<ModeMixue> alamatMixue, Context ctx) {
         this.alamatMixue = alamatMixue;
         this.ctx = ctx;
     }
@@ -33,8 +36,8 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull ClassViewHolder holder, int position) {
-        DataAlamat alamat = alamatMixue.get(position);
-        holder.tvNama.setText(alamat.getDataAlamat());
+        ModeMixue alamat = alamatMixue.get(position);
+        holder.tvDataAlamat.setText(alamat.getDataAlamat());
         holder.tvTentang.setText(alamat.getTentang());
         Glide
                 .with(ctx)
@@ -63,20 +66,20 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
 
     @Override
     public int getItemCount() {
-        return DataAlamat.();
+         {return alamatMixue().size();}
     }
 
     public class ClassViewHolder extends RecyclerView.ViewHolder {
         ImageView ivFoto;
-        TextView tvNama, tvTentang;
+        TextView tvNama, tvTentang, tvDataAlamat;
 
         public ClassViewHolder(@NonNull View itemView) {
             super(itemView);
             ivFoto = itemView.findViewById(R.id.iv_foto);
             tvNama = itemView.findViewById(R.id.tv_nama);
             tvTentang = itemView.findViewById(R.id.tv_tentang);
+            tvDataAlamat = itemView.findViewById(R.id.tv_DataAlamat);
         }
     }
 }
 
-}

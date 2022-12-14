@@ -13,15 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.time.Instant;
 import java.util.ArrayList;
 
 public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.ClassViewHolder> {
-    private ArrayList<DataAlamat> alamatMixue;
+    private ArrayList<ModeMixue> alamatMixue;
     private Context ctx;
 
 
-    public AdapterGrid(ArrayList<DataAlamat> alamatMixue, Context ctx) {
+    public AdapterGrid(ArrayList<ModeMixue> alamatMixue, Context ctx) {
         this.alamatMixue = alamatMixue;
         this.ctx = ctx;
     }
