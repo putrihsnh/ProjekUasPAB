@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 
 import java.text.CollationElementIterator;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolder> {
     private ArrayList<ModeMixue> alamatMixue;
@@ -66,9 +67,8 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
 
     @Override
     public int getItemCount() {
-         {return alamatMixue().size();}
+         {return(alamatMixue).size();}
     }
-
     public class ClassViewHolder extends RecyclerView.ViewHolder {
         ImageView ivFoto;
         TextView tvNama, tvTentang, tvDataAlamat;

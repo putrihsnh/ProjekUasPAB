@@ -30,7 +30,7 @@
             android:id="@+id/tv_tentang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alamat Mixue 2"
+            android:text="Alamat Mixue "
             android:layout_toRightOf="@+id/iv_foto"
             android:layout_below="@+id/tv_nama"
             android:layout_marginLeft="6dp"
